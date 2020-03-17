@@ -1,16 +1,171 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Test01</title>
-  </head>
-  <body>
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-    </ul>
 
-  </body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>iWeather widget V1.10</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!-- * Last style file is always Our main CSS file: -->
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+
+	<body onresize="adjustAndLoadContent()">
+		<!-- *** Task description: -->
+		<div class="container_width">
+			<h2>Pasidaryti oru prognozes widget:</h2>
+			<p>* Galite naudoti ka norite HTML/CSS/JS/PHP/Bootstrap/jQuery ir t.t., jokiu apribojimu</p>
+			<p>* Oru prognozes duomenis gauti is <a href="https://openweathermap.org/forecast5" target="_blank">https://openweathermap.org/forecast5</a></p>
+			<p>* Vaizdas kaip pateiktuose img, responsive (Svarbu tik isdestymas,</p>
+			<p>spalvos, ikoneles, sriftai ir ju dydziai ir t.t. gali buti daromi savo nuoziura)</p>
+			<br>
+			<!-- ** Task screenshot images: -->
+			<h2>SCREEN SHOTS for this task:</h2>
+				<img src="assets/images/01.jpg" alt="task_image_01">
+				<br>
+				<img src="assets/images/02.jpg" alt="task_image_02">
+				<br>
+				<img src="assets/images/03.jpg" alt="task_image_03">
+				<br>
+				<img src="assets/images/04.jpg" alt="task_image_04">
+			<br><!--// Task screenshot images. -->
+		</div><!--// Task description. -->
+		
+		<!--/************************************************
+		*** Solution by TonyJem ***
+		*****************************************************/-->
+		<br>
+		<br>
+		<div class="container_width">
+			<h2>Widget "iWeather":</h2>
+		</div>
+		<div id="divWidth" class="container_width flex_container">
+			<div><p id="layoutNr">Layout x (For screens from: X to Y )</p></div>
+			<div><p id="currentWidth">Curent Screen Width: x px</p></div>
+		</div>
+		<div class="container_width weatherWidget container-fluid">
+			<div class="row">
+				<!-- *** Current Weater: -->
+				<div class = "center_align col-12 col-sm-12 col-md-6 col-lg-4">
+					<div class="row">
+						<div class="center_align col-12 col-sm-5 col-md-5 ol-lg-5">
+							<p id="town_name" class="uppercased boldText" >Town name</p>
+							<p class="uppercased">Weather</p>
+						</div>
+						<div class="nopadding col-6 col-sm-2 col-md-3 col-lg-3">
+							<img id="iconId" src="" alt="Weather_icon">
+						</div>
+						<div class="center_align col-6 col-sm-5 col-md-4 col-lg-4">
+							<p id="temperature" class="large_text">Temperature</p>
+							<p id="weather_description" class="small_text capitalized">Weather description</p>
+						</div>
+					</div>
+				</div><!--// Current Weater: -->
+				<!-- *** Forecast collumns: -->
+				<div class = "col-12 col-sm-12 col-md-6 col-lg-8 sidepadding">
+					<div class="row sidepadding">
+
+						<!-- ** 1st forecast collumn: -->
+						<div class="collumn bgdLight col-12 col-sm col-md col-lg sidepadding">
+							<div class="row">
+								<div class = "col-4 col-sm-12 col-md-12 col-lg-12 center_align">
+									<p id="day0" class="small_text capitalized">day0</p>
+								</div>								
+								<div class = "col-2 col-sm-12 col-md-12 col-lg-12">
+									<img id="iconId0" src="" alt="IconDay0" class = "icon_in_collumn">
+								</div>
+								<div class = "col-3 col-sm-12 col-md-12 col-lg-6 center_align">
+									<p id="tempMax0" class = "maxTemp_text">tMx0</p>
+								</div>
+								<div class = "col-3 col-sm-12 col-md-12 col-lg-6 center_align">
+									<p id="tempMin0" class = "minTemp_text">tMn0</p>
+								</div>						
+							</div>
+						</div><!--// 1st forecast collumn. -->
+
+						<!-- ** 2nd forecast collumn: -->
+						<div class="collumn col-12 col-sm col-md col-lg sidepadding">
+							<div class="row">
+								<div class = "col-4 col-sm-12 col-md-12 col-lg-12 center_align">
+									<p id="day1" class="small_text capitalized">day1</p>
+								</div>							
+								<div class = "col-2 col-sm-12 col-md-12 col-lg-12">
+									<img id="iconId1" src="" alt="IconDay1" class = "icon_in_collumn">
+								</div>
+								<div class = "col-3 col-sm-12 col-md-12 col-lg-6 center_align">
+									<p id="tempMax1" class = "maxTemp_text">tMx1</p>
+								</div>
+								<div class = "col-3 col-sm-12 col-md-12 col-lg-6 center_align">
+									<p id="tempMin1" class = "minTemp_text">tMn1</p>
+								</div>						
+							</div>
+						</div><!--// 2nd forecast collumn. -->
+
+						<!-- ** 3rd forecast collumn: -->
+						<div class="collumn bgdLight col-12 col-sm col-md col-lg sidepadding">
+							<div class="row">
+								<div class = "col-4 col-sm-12 col-md-12 col-lg-12 center_align">
+									<p id="day2" class="small_text capitalized">day2</p>
+								</div>							
+								<div class = "col-2 col-sm-12 col-md-12 col-lg-12">
+									<img id="iconId2" src="" alt="IconDay2" class = "icon_in_collumn">
+								</div>
+								<div class = "col-3 col-sm-12 col-md-12 col-lg-6 center_align">
+									<p id="tempMax2" class = "maxTemp_text">tMx2</p>
+								</div>
+								<div class = "col-3 col-sm-12 col-md-12 col-lg-6 center_align">
+									<p id="tempMin2" class = "minTemp_text">tMn2</p>
+								</div>						
+							</div>
+						</div><!--// 3rd forecast collumn. -->
+
+						<!-- ** 4th forecast collumn: -->
+						<div class="collumn col-12 col-sm col-md col-lg sidepadding">
+							<div class="row">
+								<div class = "col-4 col-sm-12 col-md-12 col-lg-12 center_align">
+									<p id="day3" class="small_text capitalized">day3</p>
+								</div>								
+								<div class = "col-2 col-sm-12 col-md-12 col-lg-12">
+									<img id="iconId3" src="" alt="IconDay3" class = "icon_in_collumn">
+								</div>
+								<div class = "col-3 col-sm-12 col-md-12 col-lg-6 center_align">
+									<p id="tempMax3" class = "maxTemp_text">tMx3</p>
+								</div>
+								<div class = "col-3 col-sm-12 col-md-12 col-lg-6 center_align">
+									<p id="tempMin3" class = "minTemp_text">tMn3</p>
+								</div>						
+							</div>
+						</div><!--// 4th forecast collumn. -->	
+						
+						<!-- ** 5th forecast collumn: -->
+						<div class="collumn bgdLight col-12 col-sm col-md col-lg sidepadding">
+							<div class="row">
+								<div class = "col-4 col-sm-12 col-md-12 col-lg-12 center_align">
+									<p id="day4" class="small_text capitalized">day4</p>
+								</div>
+								<div class = "col-2 col-sm-12 col-md-12 col-lg-12">
+									<img id="iconId4" src="" alt="IconDay4" class = "icon_in_collumn">
+								</div>
+								<div class = "col-3 col-sm-12 col-md-12 col-lg-6 center_align">
+									<p id="tempMax4" class = "maxTemp_text">tMx4</p>
+								</div>
+								<div class = "col-3 col-sm-12 col-md-12 col-lg-6 center_align">
+									<p id="tempMin4" class = "minTemp_text">tMn4</p>
+								</div>						
+							</div>
+						</div><!--// 5th forecast collumn. -->						
+					</div>
+				</div><!--// Forecast collumns. -->
+			</div>
+		</div>
+
+		<br><br><br><br><br><br>
+
+		<!-- * All JS scripts goes only after main body code: -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<!-- ** Last script is Our main JS file always: -->
+		<script src="assets/scripts/custom.js"></script><!--// Main Script. -->
+	</body>
 </html>

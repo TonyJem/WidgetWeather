@@ -1,0 +1,105 @@
+/**,
+*::before,
+*::after {
+	box-sizing: border-box;
+}*/
+
+// *** Colors:
+	$MainFont_Color: #ecfcfe;
+	$MaxTempFont_Color: #ffbbbb;
+	$MinTempFont_Color: #49a5ff;
+
+	$background_Dark: #24587e;
+	$background_Light: #275d7f;
+// --- Colors.
+
+.flex_container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+.container_width{
+	max-width: 1100px;
+	margin: 0 auto;
+	p{
+		margin: 0;
+	}
+}
+
+.weatherWidget{
+	background-color: $background_Dark;
+	color: $MainFont_Color;
+	img{
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.bgdLight{
+	background-color: $background_Light;
+}
+
+.sidepadding{
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.icon_in_collumn{
+	max-width: 55px;
+	margin: 0 auto;
+}
+
+.collumn{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.center_align{
+	text-align: center;
+	margin: auto;
+}
+
+// *** Text Styles:
+	.uppercased{
+		text-transform: uppercase;
+	}
+
+	.capitalized{
+		text-transform: capitalize;
+	}
+
+	.boldText{
+		font-weight: 700;
+	}
+
+	.small_text{
+		font-size: 0.85rem;
+	}
+
+	.large_text{
+		font-size: 1.85rem;
+	}
+
+	.maxTemp_text{
+		color: $MaxTempFont_Color;
+		font-size: 0.95rem;
+	}
+
+	.minTemp_text{
+		color: $MinTempFont_Color;
+		font-size: 0.95rem;
+	}
+// --- Text Styles.
+
+/* For smallest size window */
+@media only screen and (max-width: 575px) {
+	.collumn .col-4 p {
+		text-align: left;
+	}
+
+	#town_name {
+		padding-top: 10px;
+	}
+}

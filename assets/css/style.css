@@ -1,0 +1,92 @@
+/**,
+*::before,
+*::after {
+	box-sizing: border-box;
+}*/
+.flex_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container_width {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.container_width p {
+  margin: 0;
+}
+
+.weatherWidget {
+  background-color: #24587e;
+  color: #ecfcfe;
+}
+.weatherWidget img {
+  display: block;
+  margin: 0 auto;
+}
+
+.bgdLight {
+  background-color: #275d7f;
+}
+
+.sidepadding {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.icon_in_collumn {
+  max-width: 55px;
+  margin: 0 auto;
+}
+
+.collumn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.center_align {
+  text-align: center;
+  margin: auto;
+}
+
+.uppercased {
+  text-transform: uppercase;
+}
+
+.capitalized {
+  text-transform: capitalize;
+}
+
+.boldText {
+  font-weight: 700;
+}
+
+.small_text {
+  font-size: 0.85rem;
+}
+
+.large_text {
+  font-size: 1.85rem;
+}
+
+.maxTemp_text {
+  color: #ffbbbb;
+  font-size: 0.95rem;
+}
+
+.minTemp_text {
+  color: #49a5ff;
+  font-size: 0.95rem;
+}
+
+/* For smallest size window */
+@media only screen and (max-width: 575px) {
+  .collumn .col-4 p {
+    text-align: left;
+  }
+
+  #town_name {
+    padding-top: 10px;
+  }
+}
