@@ -9,19 +9,22 @@ Web widget. Fully finished demonstration training project, completed according t
 ### Description:
 iWeather widget uses API query to get data from https://openweathermap.org/forecast5, makes initial manipulation with that data by using JavaScript and provides results to HTML page. Responsive design is implemented by using Bootstrap and done for 4 different screen widths.
 ### Screenshots:
-1.	Small width (for screens less then 575px)
+1.	_Small width for screens less then 575px_:
 
 ![Layout 1](/assets/images/L01-500.png)
 
-2.	Medium width (for screens from 576 up to 765px)
+
+2. _Medium width for screens from 576 up to 765px_:
 
 ![Layout 2](/assets/images/L02-701.png)
 
-3.	Large width (for screens from 768 up to 991px)
+
+3.	_Large width for screens from 768 up to 991px_:
 
 ![Layout 3](/assets/images/L03.png)
 
-4.	Extra Large width (for screens from 992px and more)
+
+4.	_Extra Large width for screens from 992px and more_:
 
 ![Layout 4](/assets/images/L04.png)
 
