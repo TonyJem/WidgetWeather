@@ -25,4 +25,4 @@ iWeather widget uses API query to get data from https://openweathermap.org/forec
 
 ![Layout 4](/assets/images/L04.png)
 
-As an additional option for training purposes to the conners in the right and left were implemented informational notes powered by JavaScript, that enables users to monitor current layout and actual screen width and follow it’s changings on the way. 
+As an additional option for training purposes to the top of the right and left conners were implemented informational notes powered by JavaScript, that enables users to monitor current layout and actual screen width and follow it’s changings on the way. 
