@@ -7,7 +7,7 @@ Web widget. Fully finished demonstration training project, completed according t
 * Bootstrap
 * JavaScript
 ### Description:
-iWeather widget uses API query to get data from https://openweathermap.org/forecast5, makes initial manipulation with that data by using JavaScript and provides results to HTML page.Responsive design is implemented by using Bootstrap and done for 4 different screen widths.
+iWeather widget uses API query to get data from https://openweathermap.org/forecast5, makes initial manipulation with that data by using JavaScript and provides results to HTML page. Responsive design is implemented by using Bootstrap and done for 4 different screen widths.
 ### Screenshots:
 1.	Small width (for screens less then 575px)
 2.	Medium width (for screens from 576 up to 765px)
