@@ -17,6 +17,8 @@ iWeather widget uses API query to get data from https://openweathermap.org/forec
 
 ![Layout 2](/assets/images/L02.png)
 
+![Layout 2](/assets/images/L02-701.png)
+
 3.	Large width (for screens from 768 up to 991px)
 
 ![Layout 3](/assets/images/L03.png)
