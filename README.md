@@ -1,4 +1,4 @@
-iWeather - Weather forecast for next 5 days 
+#iWeather - Weather forecast for next 5 days 
 
 Web widget. Fully finished demonstration training project, completed according to mentor’s requirements.
 
