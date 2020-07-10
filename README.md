@@ -11,21 +11,23 @@ iWeather widget uses API query to get data from https://openweathermap.org/forec
 ### Screenshots:
 1.	_Small width for screens less then 575px_:
 
-![Layout 1](/assets/images/L01-500.png)
+![Layout_1](/assets/images/L01-500.png)
 
 
 2. _Medium width for screens from 576 up to 765px_:
 
-![Layout 2](/assets/images/L02-701.png)
+![Layout_2](/assets/images/L02-701.png)
 
 
 3.	_Large width for screens from 768 up to 991px_:
 
-![Layout 3](/assets/images/L03.png)
+![Layout_3](/assets/images/L03.png)
 
 
 4.	_Extra Large width for screens from 992px and more_:
 
-![Layout 4](/assets/images/L04.png)
+![Layout_4](/assets/images/L04.png)
 
 As an additional option for training purposes to the top of the right and left conners were implemented informational notes powered by JavaScript, that enables users to monitor current layout and actual screen width and follow it’s changings on the way. 
+
+![ScreenRecord](/assets/images/ScreenRecord.gif)
